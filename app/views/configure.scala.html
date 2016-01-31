@@ -1,0 +1,23 @@
+@(uri: String)
+
+@main("Configure OTP") {
+    <p>
+        Open <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2" target="_blank">Google Authenticator</a>
+        and scan the QR code below
+    </p>
+
+    <canvas id="qrcode">
+        Your browser doesn't support html5! Please download a fitable browser.
+    </canvas>
+
+    <br/>
+
+    <a href="@routes.Application.index()">Back</a>
+
+    <script type="text/javascript">
+            $("#qrcode").qrcode({
+                size: 100,
+                text: '@Html(uri)'
+            });
+    </script>
+}

@@ -1,0 +1,15 @@
+@(otpForm: Form[String])(implicit messages: Messages)
+
+@import helper._
+
+@main("2FA") {
+    @elements.formErrors(otpForm)
+    @form(action = routes.Application.verifyPassword, 'autocomplete -> "off") {
+        @inputText(otpForm("oneTimePassword"), 'placeholder -> Messages("otp.code.placehoder"), '_label -> null, 'autofocus -> None)
+        <button type="submit">@Messages("otp.verify")</button>
+    }
+
+    <p>
+        <a href="@routes.Application.configureOTP()">Configure OTP</a>
+    </p>
+}

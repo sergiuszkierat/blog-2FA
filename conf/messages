@@ -1,0 +1,6 @@
+otp.verify = Verify
+otp.code.placehoder = 6-digit OTP code
+
+constraint.otp = 6 digits
+
+error.otp = 6 digits required
