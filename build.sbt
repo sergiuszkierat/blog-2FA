@@ -10,7 +10,7 @@ libraryDependencies ++= Seq(
   "org.jboss.aerogear" % "aerogear-otp-java" % "1.0.0",
   "org.webjars" %% "webjars-play" % "2.4.0-1",
   "org.webjars" % "jquery" % "2.2.0",
-  "org.webjars.bower" % "github-com-lrsjng-jquery-qrcode" % "0.12.0",
+  "org.webjars.bower" % "jquery.qrcode" % "0.12.0",
   specs2 % Test
 )
 
